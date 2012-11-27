@@ -1,0 +1,22 @@
+<%= semantic_form_for [:admin, @post] do |f| %>
+  <%= f.inputs "Post" do%>
+    <%= f.input :title %>
+    <%= content_tag :li, id: "toolbar" do %>
+      <%= content_tag :div, :class => "btn-toolbar" do %>
+        <%= content_tag :div, :class => "btn-group" do %>
+          <%= link_to "i", "#", :class => "btn", :id => "italics_button" %>
+          <%= link_to "b", "#", :class => "btn", :id => "bold_button"%>
+        <% end %>
+        <%= content_tag :div, :class => "btn-group" do %>
+          <%= link_to "code", "#", :class => "btn", :id => "code_button" %>
+          <%= link_to "inline code", "#", :class => "btn", :id => "inline_code_button" %>
+        <% end %>
+        <%= content_tag :div, :class => "btn-group" do %>
+          <%= link_to "quote", "#", :class => "btn", :id => "quote_button" %>
+        <% end %>
+      <% end %>
+    <% end %>
+    <%= f.input :body %>
+  <% end %>
+	<%= f.actions :submit, :cancel %>
+<% end %>

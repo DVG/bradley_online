@@ -1,0 +1,2 @@
+# Replace this with your own secret token from rake secret
+SECRET_TOKEN: "4aa1ce5a3faa7c59352d89dd77113f167c23cad00878b6aead9b507ec58b2b083c91402b236eba7d5de94a677992ee2c80f765f1e10350f03b9f666a776fead3"
