@@ -1,5 +1,7 @@
 # Welcome to Bradley Online
 
+[![Build Status](https://secure.travis-ci.org/DVG/bradley_online.png?branch=master)](https://travis-ci.org/DVG/bradley_online)
+
 This is the project for my personal blog, hosted at bradley-online.com
 
 However, anyone should feel free to take any and all of this code and do what you will with it.

@@ -11,4 +11,5 @@ before_script:
   - cp config/application.example.yml config/application.yml
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
-script: bundle exec rspec spec --format documentation --colour CI=yes
+  - "export CI=yes"
+script: bundle exec rspec spec --format documentation --colour
