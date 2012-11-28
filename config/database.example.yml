@@ -18,6 +18,13 @@ test:
   pool: 5
   timeout: 5000
 
+#for travis
+mysql:
+  adapter: mysql2
+  database: bradley_online_test
+  username: root
+  encoding: utf8
+
 production:
   adapter: mysql2
   database: myapp_productin
