@@ -3,11 +3,11 @@ rvm:
   - 1.9.2
   - 1.9.3
 before_script:
+  - cp config/database.example.yml config/database.yml
   - mysql -e 'create database bradley_online_test;'
   - rake db:migrate
   - rake db:seed
   - rake db:test:prepare
-  - cp config/database.example.yml config/database.yml
   - cp config/application.example.yml config/application.yml
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
