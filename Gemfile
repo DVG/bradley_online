@@ -15,6 +15,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'guard-rspec'
   gem 'ruby_gntp'
+  gem 'timecop'
 end
 group :test do
   gem 'capybara'
