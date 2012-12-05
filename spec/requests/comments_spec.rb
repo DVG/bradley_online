@@ -93,6 +93,11 @@ describe "Comments" do
           page.should have_content "There are no comments, be the first person to comment below!"
         end
       end
+      it "displays a comment count on the index page" do
+        create(:comment, post: @post)
+        visit posts_path(@post)
+        page.should have_link "Comments (1)"
+      end
     end
   end
 end

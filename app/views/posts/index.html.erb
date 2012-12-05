@@ -5,4 +5,7 @@
   <div class="post-body">
     <%= markdown post.body %>
   </div>
+  <div class="post-links">
+    <i class="icon-comment icon-white"></i> <%= link_to "Comments (#{post.comments.size})", post_path(post)%>
+  </div>
 <% end %>
