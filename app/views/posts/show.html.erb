@@ -2,7 +2,7 @@
 <div class="page-header">
   <h1><%= @post.title%></h1>
 </div>
-<%= @post.body %>
+<%= markdown @post.body %>
 <div id="comments">
   <div class="page-header">
     <h2>Comments</h2>
