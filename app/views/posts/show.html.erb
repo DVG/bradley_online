@@ -2,4 +2,25 @@
 <div class="page-header">
   <h1><%= @post.title%></h1>
 </div>
-<p><%= @post.body %>
+<%= @post.body %>
+<div id="comments">
+  <div class="page-header">
+    <h2>Comments</h2>
+  </div>
+  <% if @post.comments.empty? %>
+  <div class="alert alert-info">
+    There are no comments, be the first person to comment below!
+  </div>
+  <% else%>
+    <% @post.comments.each do |c| %>
+    <% unless c.new_record? %>
+        <strong><%= "#{c.name} wrote: " %></strong><br />
+        <blockquote><%= c.body %></blockquote>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+<div class="page-header">
+  <h2>Leave a Comment</h2>
+</div>
+<%= render "posts/comment_form" %>

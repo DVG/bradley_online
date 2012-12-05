@@ -1,0 +1,17 @@
+<div id="comment_form">
+  <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name == :notice ? "success" : "error" %>" id="alerts" >
+			<a class="close" data-dismiss="alert" href="#">×</a>
+       <%= msg  %>
+    </div>
+  <% end %>
+  <%= simple_form_for [@post, @comment], :html => { :class => 'form form-horizontal' } do |f| %>
+  <%= f.input :name, :input_html => { :class => "span6" } %>
+    <%= f.input :email, :placeholder => 'user@domain.com', :input_html => { :class => "span6" } %>
+    <%= f.input :website, :input_html => { :class => "span6" } %>
+    <%= f.input :body, :input_html => { :class => "span6" } %>
+    <div class="form-actions">
+      <%= f.button :submit, :class => "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

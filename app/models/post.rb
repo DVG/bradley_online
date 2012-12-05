@@ -3,4 +3,5 @@ class Post < ActiveRecord::Base
   validates_presence_of :body
   validates_presence_of :title
   belongs_to :admin_user
+  has_many :comments
 end
