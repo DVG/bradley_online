@@ -24,7 +24,7 @@ end
 group :production do
   gem 'execjs'
   gem 'therubyracer'
-  gem 'mysql2'
+  gem 'pg'
 end
 gem "twitter-bootstrap-rails"
 gem "less-rails"
